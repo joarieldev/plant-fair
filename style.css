@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "jost";
+  src:
+    url("/assets/fonts/Jost-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "dancing-script";
+  src:
+    url("/assets/fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "jost", sans-serif;
+  color: white;
+  font-size: 18px;
+  background-color: #021f11;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.sub-container {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+}
+
+header {
+  height: 60px;
+  position: sticky;
+  top: 0;
+  background-color: #021f11e7;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-family: "dancing-script", sans-serif;
+      font-size: 28px;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  section {
+    height: 100vh;
+  }
+}
+
+@media (width < 768px) {
+  .btn-menu {
+    display: block;
+  }
+
+  header {
+    nav {
+      flex-direction: column;
+
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+}
