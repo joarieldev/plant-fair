@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Feria de las Plantas</title>
   </head>
   <body>
@@ -11,15 +11,50 @@
       <nav class="sub-container">
         <span>Feria de las Plantas</span>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Eventos</a></li>
-          <li><a href="#">Sobre nosotros</a></li>
-          <li><a href="#">Incripciones</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+          <li><a href="#incripciones">Incripciones</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
-      <section class="sub-container">Section</section>
+      <section id="inicio" class="sub-container">
+        <div id="inicio-blob"></div>
+        <article id="inicio-left">
+          <h1>Nueva edición de la Expo - <span>Feria de las Plantas</span></h1>
+          <p>
+            El 22 de septiembre se desarrollará una nueva edición de la Expo Feria
+            de las Plantas. Tendrá lugar en el mismo espacio donde funciona actualmente, en Av. 19 de abril de Jujuy.
+          </p>
+          <button>Inscribirse</button>
+          <ul>
+            <li>
+              <a id="facebook" href="#" title="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7"/></svg>
+              </a>
+            </li>
+            <li>
+              <a id="instagram" href="#" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0M16.5 7.5v.01"/></svg>
+              </a>
+            </li>
+            <li>
+              <a id="twitter" href="#" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4"/></svg>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article id="inicio-right">
+          <img src="/assets/images/feria1.webp" alt="img-feria" />
+        </article>
+      </section>
+      <section id="eventos" class="sub-container">Eventos</section>
+      <section id="sobre-nosotros" class="sub-container">
+        Sobre nosotros
+      </section>
+      <section id="incripciones" class="sub-container">Incripciones</section>
     </main>
     <footer class="container">
       <div class="sub-container">Footer</div>

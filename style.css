@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -42,8 +43,11 @@ body {
 
 header {
   height: 60px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
   animation: shadow-header linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
@@ -83,7 +87,115 @@ header {
 main {
   flex-direction: column;
 
+  #inicio {
+    padding-top: 60px;
+    height: 600px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    #inicio-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+
+      h1 {
+        letter-spacing: 0.5px;
+        font-size: xx-large;
+        text-wrap: pretty;
+        span {
+          color: orange;
+        }
+      }
+
+      button {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        max-width: 200px;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: darkorange;
+        }
+
+        &:active {
+          background-color: goldenrod;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+
+        li {
+          a {
+            text-decoration: none;
+          }
+
+          #facebook {
+            color: white;
+
+            &:hover {
+              color: dodgerblue;
+            }
+          }
+
+          #instagram {
+            color: white;
+
+            &:hover {
+              color: salmon;
+            }
+          }
+
+          #twitter {
+            color: white;
+
+            &:hover {
+              color: grey;
+            }
+          }
+        }
+      }
+    }
+
+    #inicio-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    #inicio-blob {
+      background-color: green;
+      height: 350px;
+      width: 250px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -40%);
+      z-index: -1;
+      opacity: 0.3;
+      border-radius: 100%;
+      filter: blur(64px);
+    }
+  }
+
   section {
+    padding-top: 60px;
     height: 100vh;
   }
 }
@@ -103,6 +215,22 @@ main {
       }
     }
   }
+
+  main {
+    #inicio {
+      height: auto;
+      grid-template-columns: 1fr;
+      padding-top: 80px;
+      #inicio-left {
+        flex-direction: column;
+        gap: 15px
+      }
+    }
+
+    section {
+      padding-top: 40px;
+    }
+  }
 }
 
 @keyframes move-header {
@@ -113,7 +241,7 @@ main {
 
 @keyframes shadow-header {
   to {
-    backdrop-filter: blur(10px);
+    background-color: #021f11e7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 }
