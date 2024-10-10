@@ -33,12 +33,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  min-width: 320px;
 }
 
 .sub-container {
   width: 100%;
   max-width: 1200px;
-  min-width: 320px;
 }
 
 header {
@@ -110,15 +110,21 @@ main {
         }
       }
 
-      button {
+      #btn-inscribe {
         background-color: orange;
         color: white;
         border: none;
         padding: 10px 20px;
         font-size: 18px;
-        cursor: pointer;
         max-width: 200px;
         border-radius: 2px;
+        text-decoration: none;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
 
         &:hover {
           background-color: darkorange;
