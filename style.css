@@ -215,7 +215,7 @@ main {
   }
 
   #eventos {
-    padding-top: 60px;
+    padding: 60px 0;
     height: auto;
     position: relative;
     display: flex;
@@ -256,6 +256,38 @@ main {
           }
         }
       }
+    }
+  }
+
+  #sobre-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 60px 0;
+    position: relative;
+
+    p {
+      width: 100%;
+      max-width: 750px;
+    }
+
+    #leaf {
+      position: absolute;
+      top: 35%;
+      left: 10%;
+      stroke: olive;
+      width: 30px;
+      height: auto;
+    }
+
+    #seeding {
+      position: absolute;
+      top: 35%;
+      right: 10%;
+      stroke: olive;
+      width: 30px;
+      height: auto;
     }
   }
 
@@ -306,6 +338,20 @@ main {
         div {
           gap: 6px;
         }
+      }
+    }
+
+    #sobre-nosotros {
+      #leaf {
+        top: 12%;
+        left: 8%;
+        width: 24px;
+      }
+
+      #seeding {
+        top: 12%;
+        right: 8%;
+        width: 24px;
       }
     }
 
