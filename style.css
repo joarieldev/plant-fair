@@ -59,7 +59,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   animation: shadow-header linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
@@ -275,7 +275,7 @@ main {
     #leaf {
       position: absolute;
       top: 35%;
-      left: 10%;
+      left: 12%;
       stroke: olive;
       width: 30px;
       height: auto;
@@ -284,16 +284,166 @@ main {
     #seeding {
       position: absolute;
       top: 35%;
-      right: 10%;
+      right: 12%;
       stroke: olive;
       width: 30px;
       height: auto;
     }
   }
+}
 
-  section {
-    padding-top: 60px;
-    height: 100vh;
+#inscripciones {
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+
+  #inscripciones-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      background-color: #021f11ad;
+      padding: 22px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      span {
+        color: orange;
+      }
+
+      div {
+        display: flex;
+        gap: 10px;
+
+        input {
+          width: 100%;
+          padding: 10px 12px;
+          color: black;
+          border: solid 2px darkolivegreen;
+          border-radius: 6px;
+
+          &:focus {
+            outline: none;
+            border: solid 3px olive;
+          }
+        }
+
+        button {
+          padding: 10px 18px;
+          font-size: 18px;
+          border: none;
+          border-radius: 4px;
+          background-color: darkolivegreen;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: olive;
+          }
+
+          &:active {
+            background-color: olivedrab;
+          }
+        }
+      }
+    }
+  }
+
+  #inscripciones-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    #container-clima {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+
+      #box-clima {
+        display: flex;
+        flex-direction: column;
+
+        #header-clima {
+          #fecha {
+            font-size: small;
+          }
+
+          #ciudad {
+            font-size: medium;
+            font-weight: bolder;
+          }
+        }
+
+        #content-clima {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+
+          #temperatura {
+            font-size: x-large;
+          }
+        }
+
+        #detalle-clima {
+          p {
+            font-size: smaller;
+          }
+
+          #clima {
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+
+  #plant-1 {
+    position: absolute;
+    width: 250px;
+    top: 0;
+    left: -120px;
+    z-index: -1;
+  }
+
+  #plant-2 {
+    position: absolute;
+    width: 250px;
+    bottom: -8px;
+    right: -140px;
+    z-index: -1;
+  }
+}
+
+@media (width > 1024px) {
+  main {
+    #sobre-nosotros {
+      #leaf {
+        top: 54%;
+      }
+
+      #seeding {
+        top: 54%;
+      }
+    }
+  }
+
+  #inscripciones {
+    #plant-1 {
+      left: -250px;
+    }
+
+    #plant-2 {
+      right: -250px;
+    }
   }
 }
 
@@ -343,22 +493,32 @@ main {
 
     #sobre-nosotros {
       #leaf {
-        top: 12%;
-        left: 8%;
         width: 24px;
       }
 
       #seeding {
-        top: 12%;
-        right: 8%;
         width: 24px;
       }
     }
+  }
 
-    section {
-      padding-top: 40px;
+  #inscripciones {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    #inscripciones-right {
+      #container-clima {
+        flex-wrap: wrap;
+        gap: 20px;
+
+        #box-clima {
+          align-items: center;
+          text-align: center;
+        }
+      }
     }
   }
+
 }
 
 @media (500px < width < 768px) {

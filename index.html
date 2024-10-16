@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js"></script>
     <title>Feria de las Plantas</title>
   </head>
   <body>
@@ -26,7 +27,7 @@
             El 22 de septiembre se desarrollará una nueva edición de la Expo Feria
             de las Plantas. Tendrá lugar en el mismo espacio donde funciona actualmente, en Av. 19 de abril de Jujuy.
           </p>
-          <a id="btn-inscribe" href="#incripciones">Inscribirse</a>
+          <a id="btn-inscribe" href="#inscripciones">Inscribirse</a>
           <ul>
             <li>
               <a id="facebook" href="#" title="Facebook">
@@ -80,8 +81,44 @@
         <svg id="leaf" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9 0 1 0 3 2 5h3z"/></svg>
         <svg id="seeding" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3M12 14a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3M12 20V10"/></svg>
       </section>
-      <section id="incripciones" class="sub-container">Incripciones</section>
     </main>
+    <div class="container" style="background-color: #0f4229; overflow: hidden;">
+      <section id="inscripciones" class="sub-container">
+        <article id="inscripciones-left">
+          <form>
+            <h3><span>Sumate a la Gran Muestra Verde</span>, para fortalecer al comercio local y potenciar tu trabajo.</h3>
+            <div>
+              <input type="email" placeholder="example@gmail.com" required>
+              <button>Inscribirse</button>
+            </div>
+          </form>
+        </article>
+        <article id="inscripciones-right">
+          <p>Asi esta el clima en el lugar del evento!</p>
+          <div id="container-clima">
+            <div id="box-clima">
+              <div id="header-clima">
+                <p id="fecha"></p>
+                <p id="ciudad"></p>
+              </div>
+              <div id="content-clima">
+                <p id="temperatura" ></p>
+                <img id="imgClima" src="" width="60" height="60" >
+              </div>                
+              <div id="detalle-clima">
+                <p id="clima"></p>
+                <p id="humedad"></p>
+                <p id="vicibilidad"></p>
+                <p id="viento"></p>
+              </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14558.078607426072!2d-65.3002874!3d-24.1885734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8788616902a3f0da!2sFeria%20de%20Plantas%20Ornamentales!5e0!3m2!1ses!2sar!4v1661467933415!5m2!1ses!2sar" width="300" height="180" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </article>
+        <img id="plant-1" src="/assets//images/plant-1.webp" alt="plant-1">
+        <img id="plant-2" src="/assets//images/plant-2.webp" alt="plant-2">
+      </section>
+    </div>
     <footer class="container">
       <div class="sub-container">Footer</div>
     </footer>
