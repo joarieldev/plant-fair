@@ -158,30 +158,6 @@ main {
           a {
             text-decoration: none;
           }
-
-          #facebook {
-            color: white;
-
-            &:hover {
-              color: dodgerblue;
-            }
-          }
-
-          #instagram {
-            color: white;
-
-            &:hover {
-              color: salmon;
-            }
-          }
-
-          #twitter {
-            color: white;
-
-            &:hover {
-              color: grey;
-            }
-          }
         }
       }
     }
@@ -292,18 +268,46 @@ main {
   }
 }
 
+.icon-facebook {
+  color: white;
+
+  &:hover {
+    color: dodgerblue;
+  }
+}
+
+.icon-instagram {
+  color: white;
+
+  &:hover {
+    color: salmon;
+  }
+}
+
+.icon-twitter {
+  color: white;
+
+  &:hover {
+    color: grey;
+  }
+}
+
 #inscripciones {
   padding: 60px 0;
+  margin: 10px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
   position: relative;
   z-index: 1;
+  background-color: #0f4229;
+  overflow: hidden;
+  border-radius: 5px;
 
-  #inscripciones-left {
+  article {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 12px;
 
     form {
       background-color: #021f11ad;
@@ -312,9 +316,15 @@ main {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      max-width: 833px;
+      width: 100%;
 
-      span {
-        color: orange;
+      h3 {
+        max-width: 600px;
+
+        span {
+          color: orange;
+        }
       }
 
       div {
@@ -355,62 +365,11 @@ main {
     }
   }
 
-  #inscripciones-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-    #container-clima {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      width: 100%;
-
-      #box-clima {
-        display: flex;
-        flex-direction: column;
-
-        #header-clima {
-          #fecha {
-            font-size: small;
-          }
-
-          #ciudad {
-            font-size: medium;
-            font-weight: bolder;
-          }
-        }
-
-        #content-clima {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-
-          #temperatura {
-            font-size: x-large;
-          }
-        }
-
-        #detalle-clima {
-          p {
-            font-size: smaller;
-          }
-
-          #clima {
-            font-weight: bolder;
-          }
-        }
-      }
-    }
-  }
-
   #plant-1 {
     position: absolute;
     width: 250px;
     top: 0;
-    left: -120px;
+    left: -50px;
     z-index: -1;
   }
 
@@ -418,9 +377,114 @@ main {
     position: absolute;
     width: 250px;
     bottom: -8px;
-    right: -140px;
+    right: 0;
     z-index: -1;
   }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  section:nth-of-type(1) {
+    padding: 60px 0;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    border-bottom: solid 1px olive;
+
+    #footer-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      p {
+        font-weight: bold;
+        color: orange;
+      }
+
+      ul:nth-of-type(1) {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      ul:nth-of-type(2) {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 8px;
+
+        li {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    #footer-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      #container-clima {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+
+        #box-clima {
+          display: flex;
+          flex-direction: column;
+
+          #header-clima {
+            #fecha {
+              font-size: small;
+            }
+
+            #ciudad {
+              font-size: medium;
+              font-weight: bolder;
+            }
+          }
+
+          #content-clima {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            #temperatura {
+              font-size: x-large;
+            }
+          }
+
+          #detalle-clima {
+            p {
+              font-size: smaller;
+            }
+
+            #clima {
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+  }
+
 }
 
 @media (width > 1024px) {
@@ -433,16 +497,6 @@ main {
       #seeding {
         top: 54%;
       }
-    }
-  }
-
-  #inscripciones {
-    #plant-1 {
-      left: -250px;
-    }
-
-    #plant-2 {
-      right: -250px;
     }
   }
 }
@@ -502,18 +556,28 @@ main {
     }
   }
 
-  #inscripciones {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  footer {
+    section:nth-of-type(1) {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
 
-    #inscripciones-right {
-      #container-clima {
-        flex-wrap: wrap;
-        gap: 20px;
+      #footer-left {
+        align-items: center;
+        gap: 15px;
+      }
 
-        #box-clima {
-          align-items: center;
-          text-align: center;
+      #footer-right {
+        gap: 15px;
+
+        #container-clima {
+          flex-wrap: wrap;
+          gap: 10px;
+
+          #box-clima {
+            align-items: center;
+            text-align: center;
+          }
         }
       }
     }

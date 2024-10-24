@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script type="module" src="main.js"></script>
     <title>Feria de las Plantas</title>
   </head>
@@ -30,17 +30,17 @@
           <a id="btn-inscribe" href="#inscripciones">Inscribirse</a>
           <ul>
             <li>
-              <a id="facebook" href="#" title="Facebook">
+              <a class="icon-facebook" href="#" title="Facebook">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7"/></svg>
               </a>
             </li>
             <li>
-              <a id="instagram" href="#" title="Instagram">
+              <a class="icon-instagram" href="#" title="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0M16.5 7.5v.01"/></svg>
               </a>
             </li>
             <li>
-              <a id="twitter" href="#" title="Twitter">
+              <a class="icon-twitter" href="#" title="Twitter">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4"/></svg>
               </a>
             </li>
@@ -82,9 +82,9 @@
         <svg id="seeding" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3M12 14a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3M12 20V10"/></svg>
       </section>
     </main>
-    <div class="container" style="background-color: #0f4229; overflow: hidden;">
+    <div class="container">
       <section id="inscripciones" class="sub-container">
-        <article id="inscripciones-left">
+        <article>
           <form>
             <h3><span>Sumate a la Gran Muestra Verde</span>, para fortalecer al comercio local y potenciar tu trabajo.</h3>
             <div>
@@ -93,8 +93,38 @@
             </div>
           </form>
         </article>
-        <article id="inscripciones-right">
-          <p>Asi esta el clima en el lugar del evento!</p>
+        <img id="plant-1" src="/assets//images/plant-1.webp" alt="plant-1">
+        <img id="plant-2" src="/assets//images/plant-2.webp" alt="plant-2">
+      </section>
+    </div>
+    <footer class="container">
+      <section class="sub-container">
+        <article id="footer-left">
+          <p>Contactonos</p>
+          <ul>
+            <li>+34 656 000 000</li>
+            <li>appojuy@gmail.com</li>
+          </ul>
+          <ul>
+            <li>
+              <a class="icon-facebook" href="#" title="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M7 10v4h3v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H7"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-instagram" href="#" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0M16.5 7.5v.01"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon-twitter" href="#" title="Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="m4 4 11.733 16H20L8.267 4zM4 20l6.768-6.768m2.46-2.46L20 4"/></svg>
+              </a>
+            </li>
+          </ul>
+        </article>
+        <article id="footer-right">
+          <p>¡Asi esta el clima en el lugar del evento!</p>
           <div id="container-clima">
             <div id="box-clima">
               <div id="header-clima">
@@ -108,19 +138,16 @@
               <div id="detalle-clima">
                 <p id="clima"></p>
                 <p id="humedad"></p>
-                <p id="vicibilidad"></p>
                 <p id="viento"></p>
               </div>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14558.078607426072!2d-65.3002874!3d-24.1885734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8788616902a3f0da!2sFeria%20de%20Plantas%20Ornamentales!5e0!3m2!1ses!2sar!4v1661467933415!5m2!1ses!2sar" width="300" height="180" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14558.078607426072!2d-65.3002874!3d-24.1885734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8788616902a3f0da!2sFeria%20de%20Plantas%20Ornamentales!5e0!3m2!1ses!2sar!4v1661467933415!5m2!1ses!2sar" width="300" height="" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </article>
-        <img id="plant-1" src="/assets//images/plant-1.webp" alt="plant-1">
-        <img id="plant-2" src="/assets//images/plant-2.webp" alt="plant-2">
       </section>
-    </div>
-    <footer class="container">
-      <div class="sub-container">Footer</div>
+      <section class="sub-container">
+        @2024 APPOJUY
+      </section>
     </footer>
   </body>
 </html>

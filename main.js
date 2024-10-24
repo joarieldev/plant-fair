@@ -14,9 +14,10 @@ $fecha.textContent =
   date.toLocaleDateString() + ' ' + date.getHours() + ':' + date.getMinutes()
 
 //Clima Api OpenWeather
+import API_KEY from './config.js'
 let lat = '-24.188654561006086'
 let lon = '-65.300252137829'
-let key = process.env.KEY_API
+let key = API_KEY
 let lang = 'es'
 let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=${lang}`
 
@@ -42,9 +43,6 @@ async function getClima() {
 
     let humidity = ipResponse.main.humidity
     $humedad.textContent = 'Humedad: ' + humidity + '%'
-
-    let visibility = ipResponse.visibility * 0.001 //convertir metros a kilometros
-    $vicibilidad.textContent = 'Visibilidad: ' + visibility + 'Km'
 
     let wind = ipResponse.wind.speed
     $viento.textContent = 'Velocidad del viento: ' + wind + 'km/h'
