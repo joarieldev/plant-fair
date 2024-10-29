@@ -5,8 +5,10 @@ const $temperatura = $('#temperatura')
 const $imgClima = $('#imgClima')
 const $clima = $('#clima')
 const $humedad = $('#humedad')
-const $vicibilidad = $('#vicibilidad')
 const $viento = $('#viento')
+const $$ = (el) => document.querySelectorAll(el)
+const $links = $$('[data-name="navLink"]')
+const $sections = $$('.sub-container')
 
 //Fecha y Hora
 const date = new Date()
@@ -22,6 +24,7 @@ let lang = 'es'
 let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=${lang}`
 
 async function getClima() {
+  console.log($fecha)
   try {
     let response = await fetch(api)
     let ipResponse = await response.json()
@@ -52,3 +55,21 @@ async function getClima() {
 }
 
 getClima()
+
+window.addEventListener('scroll', activeLink)
+
+function activeLink() {
+  let current = 'inicio'
+  $sections.forEach((section) => {
+    const sectionTop = section.offsetTop
+    if(this.scrollY >= sectionTop) {
+      current = section.getAttribute('id')
+    }
+  })
+  $links.forEach((link) => {
+    link.classList.remove('active')
+    if(link.href.includes(current)) {
+      link.classList.add('active')
+    }
+  })
+}
