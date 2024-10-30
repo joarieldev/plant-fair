@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="assets/scrollreveal.min.js"></script>
     <script type="module" src="main.js"></script>
     <title>Feria de las Plantas</title>
   </head>
@@ -54,19 +55,19 @@
         <h2 class="sub-title">Eventos</h2>
         <p class="sub-title-paragraph">Ediciónes mas populares de la Feria de las Plantas.</p>
         <article>
-          <div>
+          <div data-name="event-card">
             <img src="/assets/images/evento2023.webp" alt="evento2023">
             <h3>En el Paseo de las Plantas festejaron los 13 años de APPOJUY</h3>
             <small>27 agosto, 2023</small>
             <p>En el ya tradicional y colorido paseo de comercialización de plantas y flores, organizado por la Secretaría de Planificación y Ambiente de la Municipalidad, este…<a href="http://sansalvadordejujuy.gob.ar/2023/08/27/en-el-paseo-de-las-plantas-festejaron-los-13-anos-de-appojuy/" target="_blank">Leer más</a></p>
           </div>
-          <div>
+          <div data-name="event-card">
             <img src="/assets/images/evento2022.webp" alt="evento2022">
             <h3>Campañas de concientización y difusión en “Jujuy Florece”</h3>
             <small>12 noviembre, 2022</small>
             <p>Durante las jornadas en las que se desarrolla el tradicional encuentro que organizan la Municipalidad de San Salvador de Jujuy junto a Asociación de Plantas…<a href="http://sansalvadordejujuy.gob.ar/2022/11/12/campanas-de-concientizacion-y-difusion-en-jujuy-florece/" target="_blank">Leer más</a></p>
           </div>
-          <div>
+          <div data-name="event-card">
             <img src="/assets/images/evento2021.webp" alt="evento2021">
             <h3>“PASEO DE LAS PLANTAS”</h3>
             <small>6 mayo, 2021</small>
@@ -75,19 +76,21 @@
         </article>
       </section>
       <section id="sobre-nosotros" class="sub-container">
-        <div id="sobre-nosotros-blob-1"></div>
-        <div id="sobre-nosotros-blob-2"></div>
         <h2 class="sub-title">Sobre nosotros</h2>
         <p class="sub-title-paragraph">APPOJUY (Asociación de Productores de Plantas Ornamentales).</p>
         <p class="sub-title-paragraph">Junto con la Municipalidad de San Salvador de Jujuy, desarrollamos el tradicional Paseo de las Plantas. El Paseo ofrece una oportunidad única para adquirir verdaderas joyas botánicas y complementos para embellecer los espacios verdes en los hogares.</p>
-        <svg id="leaf" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9 0 1 0 3 2 5h3z"/></svg>
-        <svg id="seeding" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3M12 14a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3M12 20V10"/></svg>
+        <div id="leaf">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9 0 1 0 3 2 5h3z"/></svg>
+        </div>
+        <div id="seeding">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z"/><path d="M12 10a6 6 0 0 0-6-6H3v2a6 6 0 0 0 6 6h3M12 14a6 6 0 0 1 6-6h3v1a6 6 0 0 1-6 6h-3M12 20V10"/></svg>
+        </div>
       </section>
     </main>
     <div class="container">
       <section id="inscripciones" class="sub-container">
         <article>
-          <form>
+          <form id="form-inscripciones">
             <h3><span>Sumate a la Gran Muestra Verde</span>, para fortalecer al comercio local y potenciar tu trabajo.</h3>
             <div>
               <input type="email" placeholder="example@gmail.com" required>
@@ -149,7 +152,7 @@
         </article>
       </section>
       <section class="sub-container">
-        @2024 APPOJUY
+        <p id="footer-end">2024 APPOJUY</p>
       </section>
     </footer>
   </body>
