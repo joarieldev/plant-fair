@@ -6,6 +6,9 @@ const $imgClima = $('#imgClima')
 const $clima = $('#clima')
 const $humedad = $('#humedad')
 const $viento = $('#viento')
+const $form = $('#form-inscripciones')
+const $modal = $('#modal-subscription')
+const $inputEmail = $('#email')
 const $$ = (el) => document.querySelectorAll(el)
 const $links = $$('[data-name="navLink"]')
 const $sections = $$('.sub-container')
@@ -24,7 +27,6 @@ let lang = 'es'
 let api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=${lang}`
 
 async function getClima() {
-  console.log($fecha)
   try {
     let response = await fetch(api)
     let ipResponse = await response.json()
@@ -61,7 +63,7 @@ window.addEventListener('scroll', activeLink)
 function activeLink() {
   let current = 'inicio'
   $sections.forEach((section) => {
-    const sectionTop = section.offsetTop
+    const sectionTop = section.offsetTop - 50
     if(this.scrollY >= sectionTop) {
       current = section.getAttribute('id')
     }
@@ -100,3 +102,14 @@ sr.reveal('#footer-left', {origin: 'top'})
 sr.reveal('#footer-right', {delay: 400, origin: 'top'})
 sr.reveal('#footer-blob', {delay: 700, origin: 'bottom', distance: '60px'})
 sr.reveal('#footer-end', {origin: 'bottom', distance: '50px'})
+
+
+// Modal subscription
+$form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  $modal.style.display = 'block'
+  setTimeout(() => {
+    $modal.style.display = 'none'
+    $inputEmail.value = ''
+  }, 6500)
+})
