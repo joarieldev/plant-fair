@@ -1,3 +1,34 @@
+:root{
+  --text-primary: #000000;
+  --text-darkgrey: #6c6c6c;
+  --background-primary: #ecf5f1;
+  --background-nav: #ecf5f1e1;
+  --shadow-nav: rgba(126, 126, 126, 0.5);
+  --blob-color: #90ee90;
+  --bg-box-inscription: #a0d8bd;
+  --bg-form-inscription: #ecf5f1da;
+  --expo-out: linear(
+    0 0%, 0.1684 2.66%, 0.3165 5.49%,
+    0.446 8.52%, 0.5581 11.78%,
+    0.6535 15.29%, 0.7341 19.11%,
+    0.8011 23.3%, 0.8557 27.93%,
+    0.8962 32.68%, 0.9283 38.01%,
+    0.9529 44.08%, 0.9711 51.14%,
+    0.9833 59.06%, 0.9915 68.74%, 1 100%
+  ); 
+}
+
+.darkMode {
+  --text-primary: #ffffff;
+  --text-darkgrey: #d3d3d3;
+  --background-primary: #021f11;
+  --background-nav: #021f11e1;
+  --shadow-nav: rgba(0, 87, 0, 0.5);
+  --blob-color: #008000;
+  --bg-box-inscription: #0f4229;
+  --bg-form-inscription: #021f11ad;
+}
+
 * {
   margin: 0;
   scroll-behavior: smooth;
@@ -23,9 +54,9 @@
 
 body {
   font-family: "jost", sans-serif;
-  color: white;
+  color:var(--text-primary);
   font-size: 18px;
-  background-color: #021f11;
+  background-color: var(--background-primary);
 }
 
 .container {
@@ -76,7 +107,7 @@ header {
     span {
       font-family: "dancing-script", sans-serif;
       font-size: 28px;
-      color: white;
+      color: var(--text-primary);
     }
 
     ul {
@@ -86,9 +117,10 @@ header {
       gap: 20px;
 
       li {
+        display: flex;
         a {
           text-decoration: none;
-          color: white;
+          color: var(--text-primary);
 
           &:hover {
             color: orange;
@@ -129,7 +161,7 @@ main {
 
       #btn-inscribe {
         background-color: orange;
-        color: white;
+        color: var(--text-primary);
         border: none;
         padding: 10px 20px;
         font-size: 18px;
@@ -140,7 +172,7 @@ main {
 
         a {
           text-decoration: none;
-          color: white;
+          color: var(--text-primary);
         }
 
         &:hover {
@@ -180,7 +212,7 @@ main {
     }
 
     #inicio-blob {
-      background-color: green;
+      background-color: var(--blob-color);
       height: 350px;
       width: 250px;
       position: absolute;
@@ -223,7 +255,7 @@ main {
         }
 
         small {
-          color: lightgray;
+          color: var(--text-darkgrey);
         }
 
         p {
@@ -271,7 +303,7 @@ main {
         left: 50%;
         transform: translate(-50%, -100%);
         position: absolute;
-        background: green;
+        background: var(--blob-color);
         filter: blur(70px);
         z-index: -1;
       }
@@ -296,7 +328,7 @@ main {
         left: 50%;
         transform: translate(-50%, -60%);
         position: absolute;
-        background: green;
+        background: var(--blob-color);
         border-radius: 100%;
         filter: blur(70px);
         z-index: -1;
@@ -306,7 +338,7 @@ main {
 }
 
 .icon-facebook {
-  color: white;
+  color: var(--text-primary);
 
   &:hover {
     color: dodgerblue;
@@ -314,7 +346,7 @@ main {
 }
 
 .icon-instagram {
-  color: white;
+  color: var(--text-primary);
 
   &:hover {
     color: salmon;
@@ -322,7 +354,7 @@ main {
 }
 
 .icon-twitter {
-  color: white;
+  color: var(--text-primary);
 
   &:hover {
     color: grey;
@@ -336,7 +368,7 @@ main {
   grid-template-columns: 1fr;
   position: relative;
   z-index: 1;
-  background-color: #0f4229;
+  background-color: var(--bg-box-inscription);
   overflow: hidden;
   border-radius: 5px;
 
@@ -347,7 +379,7 @@ main {
     padding: 0 12px;
 
     form {
-      background-color: #021f11ad;
+      background-color: var(--bg-form-inscription);
       padding: 22px;
       border-radius: 4px;
       display: flex;
@@ -438,6 +470,26 @@ main {
 .modal {
   animation: modal-animation ease-in-out;
   animation-duration: 1s;
+}
+
+#btnTheme {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+  }
+  
+  #sun {
+    display: none;
+    stroke: var(--text-primary);
+  }
+
+  #moon {
+    display: block;
+    stroke: var(--text-primary);
+  }
 }
 
 footer {
@@ -538,7 +590,7 @@ footer {
     }
 
     #footer-blob {
-      background-color: green;
+      background-color: var(--blob-color);
       height: 250px;
       width: 90%;
       position: absolute;
@@ -688,14 +740,14 @@ footer {
 
 @keyframes move-header {
   to {
-    transform: translateY(-28px);
+    transform: translateY(-26px);
   }
 }
 
 @keyframes shadow-header {
   to {
-    background-color: #021f11e7;
-    box-shadow: 0 0 10px rgba(0, 87, 0, 0.5);
+    background-color: var(--background-nav);
+    box-shadow: 0 0 10px var(--shadow-nav);
   }
 }
 
@@ -705,5 +757,42 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* animacion para modo dark y light */
+::view-transition-group(root) {
+  animation-duration: 0.7s;
+  animation-timing-function: var(--expo-out);
+}
+      
+::view-transition-new(root) {
+  animation-name: reveal-light;
+}
+
+::view-transition-old(root),
+.darkMode::view-transition-old(root) {
+  animation: none;
+  z-index: -1;
+}
+.darkMode::view-transition-new(root) {
+  animation-name: reveal-dark;
+}
+
+@keyframes reveal-dark {
+  from {
+    clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
+  }
+  to {
+    clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
+  }
+}
+
+@keyframes reveal-light {
+  from {
+    clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+  }
+  to {
+    clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
   }
 }
