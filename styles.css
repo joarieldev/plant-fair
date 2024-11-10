@@ -37,7 +37,7 @@
 @font-face {
   font-family: "jost";
   src:
-    url("/assets/fonts/Jost-VariableFont_wght.ttf") format("truetype");
+    url("assets/fonts/Jost-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   /* font-display: auto; */
@@ -46,7 +46,7 @@
 @font-face {
   font-family: "dancing-script";
   src:
-    url("/assets/fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
+    url("assets/fonts/DancingScript-VariableFont_wght.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   /* font-display: auto; */
