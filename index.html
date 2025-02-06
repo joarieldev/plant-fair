@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script src="assets/scrollreveal.min.js"></script>
-    <script type="module" src="main.js"></script>
+    <script src="theme.js" defer></script>
+    <script type="module" src="main.js" defer></script>
     <title>Feria de las Plantas</title>
+    <script>
+      // carga del theme antes de la renderización
+      (function() {
+        const theme = localStorage.getItem("theme") || "light";
+        if (theme === "dark") document.documentElement.classList.add("darkMode")
+        if (theme === "light") document.documentElement.classList.remove("darkMode")
+      })();
+    </script>
   </head>
   <body>
     <header class="container">
